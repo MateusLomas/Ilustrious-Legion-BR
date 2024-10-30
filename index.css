@@ -1,0 +1,134 @@
+body {
+    color: white;
+    background-color: #4d4d4d;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: .5s;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid green;
+}
+
+.center {
+    text-align: center;
+}
+
+h1 {
+    color: yellow;
+}
+
+h2 {
+    color: yellow;
+}
+
+h3 {
+    color: blue;
+}
+
+h7 {
+    color: rgb(17, 8, 148);
+}
+
+p {
+    color: red;
+}
+
+h6 {
+    color: white;
+}
+
+.trilho {
+    width: 60px;
+    height: 20px;
+    background-color: #eb0404;
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 20px;
+    height: 20px;
+    background-color: #4d4d4d;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark {
+    background-color: #ff0000;
+}
+
+.trilho.dark .indicador {
+    left: 40px;
+    background-color: #11ee75
+}
+
+body.dark {
+    background-color: #11ee75;
+}
+
+body.dark h6 {
+    color: white;
+}
+
+.link-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+nav a:hover {
+    color: greenyellow;
+}
+
+.link-bio {
+    width: 150px;
+    height: 150px;
+    border: solid 5px red;
+    border-radius: 50%;
+}
+
+.link-bio {
+    font-size: 40px;
+}
+
+.link-bio a {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 2px red;
+    border-radius: 10px;
+}
+
+.link-bio a:hover {
+    background-color: white;
+    color: red;
+}
