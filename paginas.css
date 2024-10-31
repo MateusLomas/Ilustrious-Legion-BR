@@ -1,11 +1,52 @@
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0c192c;
+}
+
+.container {
+    position: fixed;
     width: 100%;
     height: 100vh;
+}
+
+.bolhas {
+    position: absolute;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: goldenrod;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px greenyellow,
+    0 0 50px greenyellow,
+    0 0 100px greenyellow;
+    animation: animar calc(30s / var(--i)) linear infinite;
+    animation: animar calc(10s / var(--1)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: rgb(16, 179, 255);
+    box-shadow: 0 0 0 10px rgb(5, 9, 255),
+    0 0 50px rgb(8, 136, 255),
+    0 0 100px rgb(0, 247, 255);
 }
 
 .slider {
