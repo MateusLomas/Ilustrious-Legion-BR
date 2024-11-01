@@ -33,7 +33,7 @@ section div.background-section video {
 }
 
 section div.box {
-    width: 30%;
+    width: 20%;
     height: 5%;
     position: relative;
     z-index: 1;
@@ -41,7 +41,7 @@ section div.box {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 11%;
+    padding: 8%;
 }
 
 section div.box div.conteudo {
