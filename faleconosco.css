@@ -1,0 +1,175 @@
+body {
+    min-height: 100vh;
+    background: #0c192c;;
+}
+
+h6 {
+    color: red;
+}
+
+h7 {
+    color: rgb(0, 255, 42);
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+}
+
+.bolhas {
+    position: absolute;
+    display: flex;
+}
+
+.bolhas span {
+    width: 30px;
+    height: 30px;
+    background: goldenrod;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px greenyellow,
+    0 0 50px greenyellow,
+    0 0 100px greenyellow;
+    animation: animar calc(30s / var(--i)) linear infinite;
+    animation: animar calc(10s / var(--1)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even) {
+    background: rgb(16, 179, 255);
+    box-shadow: 0 0 0 10px rgb(5, 9, 255),
+    0 0 50px rgb(8, 136, 255),
+    0 0 100px rgb(0, 247, 255);
+}
+
+.slider {
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 800px;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 50px;
+}
+
+.manual-btn:hover {
+    background-color: rgb(221, 221, 221);
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+#div-fixa {
+    position: fixed;
+    bottom: 20px;
+    margin: 0 20px;
+    background: rgb(89, 245, 122);
+    width: 230px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+#div-fixa.shrink {
+    width: 50px;
+    transition: 0.5s all;
+    overflow: hidden;
+}
+
+#div-fixa img {
+    width: 50px;
+    height: 50px;
+}
+
+#div-fixa a .flex-itens {
+    display: flex;
+    align-items: center;
+}
+
+#div-fixa a .flex-itens span {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #040305;
+    margin-left: 5px;
+    font-size: 18px;
+    min-width: 170px;
+}
+
+.flutuar {
+    animation-name: flutuar;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes flutuar {
+    from {
+        transform: translate3d(0, 0, 0);
+        filter: brightness(100%);
+    }
+    to {
+        transform: translate3d(0, -15px, 0);
+        filter: brightness(150%); 
+    }
+}
