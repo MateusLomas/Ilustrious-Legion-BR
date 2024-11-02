@@ -255,3 +255,64 @@ nav a:hover {
     letter-spacing: 12px;
     color: #fff;
 }
+
+/* CSS para el Preloader */
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	animation: spinz 1.35s linear infinite;
+	width: 100%;
+	height: 100%;
+	/* background-color: #ffffff; */
+	background-color: #F6FBFD;       /* Change the background color here */
+	z-index: 100;
+  }
+  
+  .loader {
+    border: 20px solid rgba(0, 250, 62, 0.438);
+	border-top: 20px solid hsl(125, 100%, 31%);  /* Change the preloader color here */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 1.35s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -60px;
+	margin-left: -60px;
+  }
+
+  @keyframes spin {
+	0% {
+	  transform: rotateZ(0deg);
+	  opacity:1;
+	}
+	50% {
+	  transform: rotateX(360deg);
+	  opacity:1;
+	}
+	75% {
+	  opacity:1;
+      transform: rotateY(400deg);
+	}
+	100% {
+      transform: scaleX(500deg);
+	  opacity:0;
+	}
+  }
+  
+  @keyframes spinz {
+	0% {
+	  opacity:1;
+	}
+	50% {
+	  opacity:1;
+	}
+	75% {
+	  opacity:1;
+	}
+	100% {
+	  opacity:0;
+	}
+  }
