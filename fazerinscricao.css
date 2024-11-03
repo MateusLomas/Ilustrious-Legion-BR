@@ -12,6 +12,10 @@ h2 {
     color: green;
 }
 
+h6 {
+    color: greenyellow;
+}
+
 * {/* Animation meio inicio */
     margin: 0;
     padding: 0;
@@ -137,3 +141,46 @@ body {
     bottom: -80px;
     letter-spacing: 0.15em;
 }/* Animation meio fim */
+
+.link-bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto;
+    gap: 20px;
+    position: absolute;
+    top: 500px;
+}
+
+nav a:hover {
+    color: greenyellow;
+}
+
+.link-bio {
+    width: 150px;
+    height: 150px;
+}
+
+.link-bio {
+    font-size: 40px;
+}
+
+.link-bio a {
+    background-color: rgb(47, 0, 255);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    border: solid 2px rgb(0, 255, 21);
+    border-radius: 10px;
+}
+
+.link-bio a:hover {
+    background-color: rgb(243, 247, 12);
+    color: red;
+}
